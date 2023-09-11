@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="square" id="square1">
+            <p id="number1">0</p>
+        </div>
+        <div class="square" id="square2">
+            <p id="number2">0</p>
+        </div>
+        <div class="square" id="square3">
+            <p id="number3"></p>
+        </div>
+    </div>
+    <div class="button-container">
+        <select id="operationSelect">
+            <option value="multiplication">Vermenigvuldigen</option>
+            <option value="division">Delen</option>
+            <option value="mix">Mix</option>
+        </select>
+    </div>
+    <div class="button-container">
+        <button id="generateButton">Genereer variabelen</button>
+        <button id="showAnswerButton">Geef antwoord</button>
+    </div>    
+    
+    <script src="javascript/rekenhulp.js"></script>
+</body>
+</html>

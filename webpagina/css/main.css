@@ -21,6 +21,10 @@ footer {
     color: white;
 }
 
+img {
+    width: 500px;
+}
+
 .square {
     width: 100px;
     height: 100px;

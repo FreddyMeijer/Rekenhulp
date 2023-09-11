@@ -7,3 +7,4 @@ De rekenhulp is tot stand gekomen ten behoeve van rekenonderwijs op IKC wonderst
 4. De code moet het mogelijk maken om te kiezen voor vermenigvuldigen, delen of een mix.
 5. De code moet het mogelijk maken om de som te geven (`a + b = x` waarbij x uitgerekend moet worden) of het antwoord en een van de variabelen (`a + b = x` waarbij b onbekend is)
 
+#### Bugs, fouten en wensen

@@ -49,6 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const remainder = randomNum1 % randomNum2;
                 if (quotient === 0) {
                     result = "kan niet";
+                } else if (remainder === 0 ) {
+                    result = quotient;
                 } else {
                     result = `${quotient} rest ${remainder}`;
                 }
@@ -68,6 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     if (quotient === 0) {
                         result = "kan niet";
+                    } else if (remainder === 0 ) {
+                        result = quotient;
                     } else {
                         result = `${quotient} rest ${remainder}`;
                     }

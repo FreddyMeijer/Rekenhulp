@@ -10,8 +10,9 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row; /* Stack the squares vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
 }
 
 footer {
@@ -19,33 +20,36 @@ footer {
     font-size: 10px;
     font-weight: bold;
     color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
 }
 
 img {
-    width: 500px;
+    height: 20px;
 }
 
 .square {
-    width: 100px;
+    width: auto;
     height: 100px;
     background-color: #274C43;
     font-family: 'Callie Chalk Font', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 125px;
     color: white;
 }
 
 #square3{
-    width: 300px;
+    width: auto;
     height: 100px;
     background-color: #274C43;
     font-family: 'Callie Chalk Font', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 125px;
     color: white;
 }
 
@@ -62,5 +66,12 @@ button, select {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    font-size: 16px; /* Match font size with buttons */
+    font-size: 16px; 
+    width: 200px;
+}
+
+.dashboard{
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
 }

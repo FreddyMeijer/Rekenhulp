@@ -6,3 +6,23 @@ De rekenhulp is tot stand gekomen ten behoeve van rekenonderwijs op IKC de Meerp
 3. Er moet een mogelijkheid zijn om te rekenen met rest.
 4. De code moet het mogelijk maken om te kiezen voor vermenigvuldigen, delen of een mix.
 5. De code moet het mogelijk maken om de som te geven (`a + b = x` waarbij x uitgerekend moet worden) of het antwoord en een van de variabelen (`a + b = x` waarbij b onbekend is)
+
+#### Bediening naar andere kant
+De bediening van de rekenhulp zit links. Als je het prettiger vindt om de bediening rechts te hebben, kan je dat doen door deze code uit main.css aan te passen:
+
+```css
+.dashboard{
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+}
+```
+naar:
+
+```css
+.dashboard{
+    position: absolute;
+    bottom: 25px;
+    right: 10px;
+}
+```

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekenhulp - Vermenigvuldigen en delen</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.cdnfonts.com/css/callie-chalk-font" rel="stylesheet">
-                
+
 </head>
+
 <body>
-    <img src="img/New_IKC_DE_MEERPAAL_kleur-removebg-preview.png" alt="logo_meerpaal">
     <br>
     <br>
     <div class="container">
@@ -17,34 +18,38 @@
             <p id="number1"></p>
         </div>
         <div class="square" id="operatorSymbol">
-            <p></p>
+            <p id="operatorSymbol"></p>
         </div>
         <div class="square" id="square2">
             <p id="number2"></p>
         </div>
         <div class="square">
-            <p>=</p>
+            <p>&nbsp;=&nbsp;</p>
         </div>
         <div class="square" id="square3">
             <p id="number3"></p>
         </div>
     </div>
-    <div class="button-container">
-        <select id="operationSelect">
-            <option value="multiplication">Vermenigvuldigen</option>
-            <option value="division">Delen</option>
-            <option value="mix">Mix</option>
-        </select>
+    <div class="dashboard">
+        <div class="button-container">
+            <select id="operationSelect">
+                <option value="multiplication">Vermenigvuldigen</option>
+                <option value="division">Delen</option>
+                <option value="mix">Mix</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <button id="generateButton">Genereer variabelen</button>
+        </div>
+        <div class="button-container">
+            <button id="showAnswerButton">Geef antwoord</button>
+        </div>
     </div>
-    <div class="button-container">
-        <button id="generateButton">Genereer variabelen</button>
-        <button id="showAnswerButton">Geef antwoord</button>
-    </div> 
-    <br>
-    <br>    
     <script src="javascript/rekenhulp.js"></script>
 </body>
 <footer>
-    <p>&copy 2023 F. Meijer</p>
+    <p>&copy 2023 - F. Meijer - voor </p>
+    <p><img src="img/New_IKC_DE_MEERPAAL_kleur.jpg" alt="logo_meerpaal"></p>
 </footer>
+
 </html>

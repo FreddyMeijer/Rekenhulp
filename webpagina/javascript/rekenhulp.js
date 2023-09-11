@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         number1.textContent = randomNum1;
         number2.textContent = randomNum2;
         number3.textContent = ""; // Clear square 3 when generating new numbers
-        
+
         // Set the operator symbol based on the selected operation
         if (selectedOperation === "multiplication") {
             operatorSymbol.textContent = "X";
@@ -42,63 +42,56 @@ document.addEventListener("DOMContentLoaded", function () {
             result = randomNum1 * randomNum2;
         } else if (selectedOperation === "division") {
             if (randomNum2 === 0) {
-                result = "Division by zero!";
+                result = randomNum1;
             } else {
-                // Ensure number1 is greater than or equal to number2
-                if (randomNum1 < randomNum2) {
-                    const tempNum = randomNum1;
-                    randomNum1 = randomNum2;
-                    randomNum2 = tempNum;
-                }
 
                 const quotient = Math.floor(randomNum1 / randomNum2);
                 const remainder = randomNum1 % randomNum2;
-
-                result = `${quotient} rest ${remainder}`;
+                if (quotient === 0) {
+                    result = "kan niet";
+                } else {
+                    result = `${quotient} rest ${remainder}`;
+                }
             }
         } else if (selectedOperation === "mix") {
             // Randomly choose multiplication or division
-            const randomOperation = Math.random() < 0.5 ? "multiplication" : "division";
 
-            if (randomOperation === "multiplication") {
+            if (operatorSymbol.textContent === "X") {
                 result = randomNum1 * randomNum2;
             } else {
                 if (randomNum2 === 0) {
-                    result = "Division by zero!";
+                    result = randomNum1;
                 } else {
-                    // Ensure number1 is greater than or equal to number2
-                    if (randomNum1 < randomNum2) {
-                        const tempNum = randomNum1;
-                        randomNum1 = randomNum2;
-                        randomNum2 = tempNum;
-                    }
 
                     const quotient = Math.floor(randomNum1 / randomNum2);
                     const remainder = randomNum1 % randomNum2;
 
-                    result = `${quotient} rest ${remainder}`;
+                    if (quotient === 0) {
+                        result = "kan niet";
+                    } else {
+                        result = `${quotient} rest ${remainder}`;
+                    }
                 }
             }
         }
+    number3.textContent = result;
+});
 
-        number3.textContent = result;
-    });
+// Update the selected operation when it changes
+operationSelect.addEventListener("change", function () {
+    selectedOperation = operationSelect.value;
 
-    // Update the selected operation when it changes
-    operationSelect.addEventListener("change", function () {
-        selectedOperation = operationSelect.value;
-        
-        // Set the operator symbol based on the selected operation
-        if (selectedOperation === "multiplication") {
-            operatorSymbol.textContent = "X";
-        } else if (selectedOperation === "division") {
-            operatorSymbol.textContent = ":";
-        } else if (selectedOperation === "mix") {
-            // Randomly choose multiplication or division
-            operatorSymbol.textContent = Math.random() < 0.5 ? "X" : ":";
-        }
-    });
+    // Set the operator symbol based on the selected operation
+    if (selectedOperation === "multiplication") {
+        operatorSymbol.textContent = "X";
+    } else if (selectedOperation === "division") {
+        operatorSymbol.textContent = ":";
+    } else if (selectedOperation === "mix") {
+        // Randomly choose multiplication or division
+        operatorSymbol.textContent = Math.random() < 0.5 ? "X" : ":";
+    }
+});
 
-    // Generate initial random numbers
-    generateRandomNumbers();
+// Generate initial random numbers
+generateRandomNumbers();
 });

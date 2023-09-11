@@ -31,10 +31,15 @@ document.addEventListener("DOMContentLoaded", function () {
             result = randomNum1 * randomNum2;
         } else if (selectedOperation === "division") {
             if (randomNum2 === 0) {
-                result = "0";
-            } else if (randomNum1 < randomNum2) {
-                result = `0 rest ${randomNum1}`;
+                result = "niet mogelijk";
             } else {
+                // Ensure number1 is greater than or equal to number2
+                if (randomNum1 < randomNum2) {
+                    const tempNum = randomNum1;
+                    randomNum1 = randomNum2;
+                    randomNum2 = tempNum;
+                }
+
                 const quotient = Math.floor(randomNum1 / randomNum2);
                 const remainder = randomNum1 % randomNum2;
 
@@ -48,10 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 result = randomNum1 * randomNum2;
             } else {
                 if (randomNum2 === 0) {
-                    result = "0";
-                } else if (randomNum1 < randomNum2) {
-                    result = `0 rest ${randomNum1}`;
+                    result = "niet mogelijk";
                 } else {
+                    // Ensure number1 is greater than or equal to number2
+                    if (randomNum1 < randomNum2) {
+                        const tempNum = randomNum1;
+                        randomNum1 = randomNum2;
+                        randomNum2 = tempNum;
+                    }
+
                     const quotient = Math.floor(randomNum1 / randomNum2);
                     const remainder = randomNum1 % randomNum2;
 

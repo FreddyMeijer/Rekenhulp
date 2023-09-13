@@ -1,28 +1,23 @@
 ## Rekenhulp
-De rekenhulp is tot stand gekomen ten behoeve van rekenonderwijs op IKC de Meerpaal in Zoetermeer. De opdrachtomschrijving is als volgt:
 
-1. De sommen komen uit de tafels van 1 tot en met 12
-2. De tafels lopen van 1 tot en met 12. Het laagste getal is 0 en het hoogste is 144 (12*12)
-3. Er moet een mogelijkheid zijn om te rekenen met rest.
-4. De code moet het mogelijk maken om te kiezen voor vermenigvuldigen, delen of een mix.
-5. De code moet het mogelijk maken om de som te geven (`a + b = x` waarbij x uitgerekend moet worden) of het antwoord en een van de variabelen (`a + b = x` waarbij b onbekend is)
-
+De rekenhulp is tot stand gekomen ten behoeve van rekenonderwijs op <a href="https://www.ikcdemeerpaal.nl/" target = "_blank">IKC de Meerpaal in Zoetermeer</a>. De ontwikkeling is gedaan door <a href="https://www.linkedin.com/in/freddymeijer/" target="_blank">Freddy Meijer</a>. De opdracht kwam van <a href="https://www.linkedin.com/in/chantal-kevenaar" target="_blank">Chantal Kevenaar</a>, rekencoördinator op IKC de Meerpaal.
 #### Bediening naar andere kant
-De bediening van de rekenhulp zit links. Als je het prettiger vindt om de bediening rechts te hebben, kan je dat doen door deze code uit main.css aan te passen:
 
-```css
-.dashboard{
-    position: absolute;
-    bottom: 25px;
-    left: 10px;
-}
-```
-naar:
+De bediening (het Menu) kan over de pagina gesleept worden.
 
-```css
-.dashboard{
-    position: absolute;
-    bottom: 25px;
-    right: 10px;
-}
-```
+<table>
+    <tbody>
+        <tr>
+            <td>Ga daarvoor met muis naar het menu zodat de muispointer een handje wordt</td>
+            <td><img src="/img/toelichting_drag_and_drop_1.png"></td>
+        </tr>
+        <tr>
+            <td>Klik met de muis. Je kan nu het menu gaan verschuiven</td>
+            <td><img src="/img/toelichting_drag_and_drop_2.png"></td>
+        </tr>
+        <tr>
+            <td>Sleep het menu naar de plek waar je het wilt hebben. Het handje is gesloten. Klik een keer zodat het handje weer open staat (zoals in plaatje 1)</td>
+            <td><img src="/img/toelichting_drag_and_drop_3.png"></td>
+        </tr>
+    <tbody>
+</table>

@@ -72,11 +72,11 @@ button, select {
 
 .dashboard{
     background-color: #274C43;
+    cursor: grab;
     position: absolute;
     bottom: 25px;
     left: 10px;
     padding:10px;
-    border: 1px solid white;
 }
 
 .dashboardHeader{

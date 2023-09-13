@@ -99,3 +99,31 @@ operationSelect.addEventListener("change", function () {
 // Generate initial random numbers
 generateRandomNumbers();
 });
+
+// JavaScript code in your rekenhulp.js file
+const dashboard = document.querySelector('.dashboard');
+let offsetX, offsetY, isDragging = false;
+
+dashboard.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  offsetX = e.clientX - dashboard.getBoundingClientRect().left;
+  offsetY = e.clientY - dashboard.getBoundingClientRect().top;
+  dashboard.style.cursor = 'grabbing';
+  dashboard.style.userSelect = 'none';
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+
+  const newX = e.clientX - offsetX;
+  const newY = e.clientY - offsetY;
+
+  dashboard.style.left = `${newX}px`;
+  dashboard.style.top = `${newY}px`;
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  dashboard.style.cursor = 'grab';
+  dashboard.style.userSelect = 'auto';
+});

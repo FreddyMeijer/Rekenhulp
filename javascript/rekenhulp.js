@@ -17,13 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateRandomNumbers() {
         const maxTafels = parseInt(tafelsInput.value);
-        randomNum1 = Math.floor(Math.random() * (maxTafels + 1));
-        randomNum2 = Math.floor(Math.random() * (maxTafels + 1)); 
-
+    
+        if (selectedOperation === "division") {
+            if (document.getElementById("remainderCheckbox").checked) {
+                do {
+                    randomNum1 = Math.floor(Math.random() * (maxTafels + 1));
+                    randomNum2 = Math.floor(Math.random() * (maxTafels + 1));
+                } while (randomNum2 === 0 || randomNum1 % randomNum2 !== 0);
+            } else {
+                do {
+                    randomNum1 = Math.floor(Math.random() * (maxTafels + 1));
+                    randomNum2 = Math.floor(Math.random() * (maxTafels + 1));
+                } while (randomNum2 === 0);
+            }
+        } else {
+            randomNum1 = Math.floor(Math.random() * (maxTafels + 1));
+            randomNum2 = Math.floor(Math.random() * (maxTafels + 1));
+        }
+    
         number1.textContent = randomNum1;
         number2.textContent = randomNum2;
-        number3.textContent = ""; // Clear square 3 when generating new numbers
-
+        number3.textContent = "";
+    
         // Set the operator symbol based on the selected operation
         if (selectedOperation === "multiplication") {
             operatorSymbol.textContent = "X";
@@ -34,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             operatorSymbol.textContent = Math.random() < 0.5 ? "X" : ":";
         }
     }
+    
 
     generateButton.addEventListener("click", generateRandomNumbers);
 

@@ -1,6 +1,10 @@
 ## Rekenhulp
 
 De rekenhulp is tot stand gekomen ten behoeve van rekenonderwijs op <a href="https://www.ikcdemeerpaal.nl/" target = "_blank">IKC de Meerpaal in Zoetermeer</a>. De ontwikkeling is gedaan door <a href="https://www.linkedin.com/in/freddymeijer/" target="_blank">Freddy Meijer</a>. De opdracht kwam van <a href="https://www.linkedin.com/in/chantal-kevenaar" target="_blank">Chantal Kevenaar</a>, rekencoördinator op IKC de Meerpaal.
+
+#### Keuze tafels tot
+Bij de keuze *tafels tot* geef je aan wat de maximale vermenigvuldiger is en wat het maximale vermenigvuldigtal is. Dus als je hier kiest voor 15, is de hoogst mogelijke vermenigvuldiging `15*15`.
+
 #### Bediening naar andere kant
 
 De bediening (het Menu) kan over de pagina gesleept worden.

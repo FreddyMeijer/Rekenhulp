@@ -149,3 +149,7 @@ button, select {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .wide-input {
+    width: 195px; /* Adjust the width as needed to match the pulldown menu */
+}
